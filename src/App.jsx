@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import FloatingNav from "./components/ui/floating-nav";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
@@ -13,7 +14,7 @@ function App() {
     <Router>
       <Navbar />
 
-      <main className="pt-16"> {/* padding so content is not hidden behind fixed navbar */}
+      <main className="pb-[5.5rem] pt-16 md:pb-24">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
@@ -22,6 +23,8 @@ function App() {
           <Route path="/admission" element={<Admission />} />
         </Routes>
       </main>
+
+      <FloatingNav />
 
       <Footer />
     </Router>

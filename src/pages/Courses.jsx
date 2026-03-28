@@ -1,4 +1,4 @@
-import { BookOpen, Users, Clock, DollarSign } from "lucide-react";
+import { Users, Clock, Banknote } from "lucide-react";
 
 export default function Courses() {
   const courses = [
@@ -7,8 +7,8 @@ export default function Courses() {
       description:
         "Learn programming, algorithms, AI, and software development with hands-on projects.",
       duration: "4 Years",
-      price: "₹80,000 / year",
-      teacher: "Dr. Asha Verma",
+      price: "PKR 220,000 / year",
+      teacher: "Dr. Ahmed Hassan",
       img: "https://www.shutterstock.com/image-photo/smart-young-students-studying-university-600nw-2102451307.jpg",
     },
     {
@@ -16,8 +16,8 @@ export default function Courses() {
       description:
         "Develop leadership, management, and entrepreneurial skills for the global business world.",
       duration: "3 Years",
-      price: "₹70,000 / year",
-      teacher: "Prof. Raj Malhotra",
+      price: "PKR 195,000 / year",
+      teacher: "Prof. Sana Malik",
       img: "https://www.shutterstock.com/image-photo/mba-master-business-administration-program-600nw-2434045027.jpg",
     },
     {
@@ -25,8 +25,8 @@ export default function Courses() {
       description:
         "Master data analytics, machine learning, and big data tools to solve real-world problems.",
       duration: "2 Years",
-      price: "₹90,000 / year",
-      teacher: "Dr. Neha Sharma",
+      price: "PKR 245,000 / year",
+      teacher: "Dr. Usman Khan",
       img: "https://www.kdnuggets.com/wp-content/uploads/awan_7_free_data_science_platform_beginners_1.png",
     },
     {
@@ -34,8 +34,8 @@ export default function Courses() {
       description:
         "Understand human behavior, mental health, and cognitive processes with practical exposure.",
       duration: "3 Years",
-      price: "₹60,000 / year",
-      teacher: "Dr. Priya Kapoor",
+      price: "PKR 165,000 / year",
+      teacher: "Dr. Fatima Zahra",
       img: "https://thumbs.dreamstime.com/b/counseling-young-women-one-attendants-psychological-course-77250783.jpg",
     },
     {
@@ -43,8 +43,8 @@ export default function Courses() {
       description:
         "Gain technical expertise in civil, mechanical, and electrical fields with industry projects.",
       duration: "4 Years",
-      price: "₹1,00,000 / year",
-      teacher: "Prof. Anil Mehra",
+      price: "PKR 285,000 / year",
+      teacher: "Engr. Bilal Ahmed",
       img: "https://media.istockphoto.com/id/1395428816/photo/group-of-young-people-in-technical-vocational-training-with-teacher.jpg?s=612x612&w=0&k=20&c=pG8hCoqokgF-szNZJjDrqi-4gxYKRxth-RcyG2wI9u8=",
     },
     {
@@ -52,8 +52,8 @@ export default function Courses() {
       description:
         "Unleash your creativity with design tools, branding strategies, and UI/UX design principles.",
       duration: "2 Years",
-      price: "₹50,000 / year",
-      teacher: "Ms. Kavita Nair",
+      price: "PKR 145,000 / year",
+      teacher: "Ms. Ayesha Siddiqui",
       img: "https://blog-frontend.envato.com/cdn-cgi/image/width=2400,quality=75,format=auto/uploads/sites/2/2023/02/Tuts_Roundup__Top_Graphic_Design_Courses.jpeg",
     },
   ];
@@ -89,21 +89,21 @@ export default function Courses() {
                 <p className="mt-3 text-gray-600">{course.description}</p>
 
                 {/* Course Info */}
-                <div className="mt-4 flex items-center text-gray-500 text-sm space-x-4">
+                <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-gray-500 text-sm">
                   <span className="flex items-center gap-1">
-                    <Clock size={16} /> {course.duration}
+                    <Clock size={16} aria-hidden /> {course.duration}
                   </span>
-                  <span className="flex items-center gap-1">
-                    <DollarSign size={16} /> {course.price}
+                  <span className="flex items-center gap-1 font-medium text-indigo-700">
+                    <Banknote size={16} aria-hidden /> {course.price}
                   </span>
                 </div>
 
                 {/* Teacher Info */}
                 <div className="mt-6 flex items-center gap-3">
-                  <Users className="w-10 h-10 text-blue-600 bg-blue-100 rounded-full p-2" />
+                  <Users className="w-10 h-10 text-blue-600 bg-blue-100 rounded-full p-2" aria-hidden />
                   <div>
                     <p className="font-medium text-gray-800">{course.teacher}</p>
-                    <p className="text-sm text-gray-500">Friendly Instructor</p>
+                    <p className="text-sm text-gray-500">Faculty (Pakistan)</p>
                   </div>
                 </div>
 

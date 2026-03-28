@@ -59,9 +59,21 @@ export default function About() {
         </h2>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-10 text-center">
           {[
-            { name: "Dr. Asha Verma", role: "Professor of Computer Science", img: "https://llim.edu/wp-content/uploads/2024/08/Asha-Varma.jpg" },
-            { name: "Dr. Raj Malhotra", role: "Dean of Business Studies", img: "https://doximity-res.cloudinary.com/images/f_auto,q_auto,t_public_profile_photo_320x320/y385ierclzfbba2wftqs/rajesh-malhotra-md-lee-s-summit-mo.jpg" },
-            { name: "Dr. Neha Sharma", role: "Head of Data Science", img: "https://media.licdn.com/dms/image/v2/D5603AQFaIZKVhnof1Q/profile-displayphoto-shrink_200_200/B56ZXc8IjcGQAc-/0/1743168506928?e=2147483647&v=beta&t=R_Omd_4gRJdmIOyn2dpn2HVK6aD-NDPYOhb6WTXAnic" },
+            {
+              name: "Dr. Ahmed Hassan",
+              role: "Professor of Computer Science",
+              img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80",
+            },
+            {
+              name: "Prof. Sana Malik",
+              role: "Dean of Business Studies",
+              img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80",
+            },
+            {
+              name: "Dr. Usman Khan",
+              role: "Head of Data Science",
+              img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80",
+            },
           ].map((faculty, index) => (
             <div
               key={index}

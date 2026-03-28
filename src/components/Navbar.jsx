@@ -1,68 +1,27 @@
-import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
+
+const COLLEGE_NAME = "Independent College of English and Microtrainings";
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const navLinks = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Courses", href: "/courses" },
-    { name: "Admission", href: "/admission" },
-  ];
-
   return (
-    <header className="fixed top-0 w-full bg-white shadow-md z-50">
-      <div className="max-w-7xl mx-auto flex items-center justify-between p-4">
-        {/* Logo + Title */}
-        <div className="flex items-center gap-2">
+    <header className="fixed top-0 z-40 w-full border-b border-border/60 bg-white/90 shadow-sm backdrop-blur-md dark:bg-neutral-950/90">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:px-6">
+        <Link
+          to="/"
+          className="flex min-w-0 items-center gap-2 sm:gap-3"
+          aria-label={`${COLLEGE_NAME} — Home`}
+        >
           <img
             src="images/univ.png"
-            alt="University Logo"
-            className="w-10 h-10 object-cover rounded-full"
+            alt=""
+            className="h-9 w-9 shrink-0 rounded-full object-cover ring-1 ring-border sm:h-10 sm:w-10"
           />
-          <h1 className="text-2xl font-bold text-blue-600">EduVerse University</h1>
-        </div>
-
-        {/* Desktop Menu */}
-        <nav className="hidden md:flex space-x-8">
-          {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              className="text-gray-700 font-medium hover:text-blue-600 transition"
-            >
-              {link.name}
-            </a>
-          ))}
-        </nav>
-
-        {/* Mobile Menu Button */}
-        <button
-          className="md:hidden text-gray-700"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {isOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
+          <span className="truncate text-base font-semibold text-indigo-700 sm:text-lg md:text-xl dark:text-indigo-400">
+            <span className="hidden sm:inline">{COLLEGE_NAME}</span>
+            <span className="sm:hidden">ICEM</span>
+          </span>
+        </Link>
       </div>
-
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div className="md:hidden bg-white shadow-md">
-          <nav className="flex flex-col space-y-4 p-4">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                onClick={() => setIsOpen(false)}
-                className="text-gray-700 font-medium hover:text-blue-600"
-              >
-                {link.name}
-              </a>
-            ))}
-          </nav>
-        </div>
-      )}
     </header>
   );
 }
